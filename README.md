@@ -64,10 +64,14 @@ ReactJS project 🔗</a>
 2. <a href="https://delasign.com/blog/reactjs-3js-setup-shader/?utm=vitejs-threejs-reactjs-starter-project">How to add a shader to a ThreeJS geometry in ReactJS 🔗</a>
 3. <a href="https://delasign.com/blog/reactjs-3js-lights-standard-material/?utm=vitejs-threejs-reactjs-starter-project">How to add lights to a standard material in ThreeJS 🔗</a>
 4. <a href="https://delasign.com/blog/reactjs-3js-lights-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add lights to a material that uses a shader in ThreeJS 🔗</a>
+5. <a href="https://delasign.com/blog/reactjs-3js-cube-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add a shader to a box geometry in ThreeJS 🔗</a>
+6. <a href="https://delasign.com/blog/reactjs-3js-orbital-controls/?utm=vitejs-threejs-reactjs-starter-project">How to add Orbit Controls to a ThreeJS scene in ReactJS 🔗</a>
+7. <a href="https://delasign.com/blog/reactjs-3js-box-geometry-colored-faces-shader/?utm=vitejs-threejs-reactjs-starter-project">How to color the faces of a box geometry using a shader in ThreeJS 🔗</a>
 
 ### Uniforms, Varying & Attributes
 1. <a href="https://delasign.com/blog/reactjs-3js-data-vertex-to-fragment/?utm=vitejs-threejs-reactjs-starter-project">How to pass data from a vertex shader to a fragment shader in ThreeJS 🔗</a>
 2. <a href="https://delasign.com/blog/reactjs-3js-data-to-vertex-and-fragment/?utm=vitejs-threejs-reactjs-starter-project">How to create and use uniform data in shaders in ThreeJS 🔗</a>
+3. <a href="https://delasign.com/blog/reactjs-3js-attributes/?utm=vitejs-threejs-reactjs-starter-project">How to create and use attributes in shaders in ThreeJS 🔗</a>
 
 ### Errors
 
