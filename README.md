@@ -52,12 +52,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 # 📰 Guides
 
 1. <a href="https://www.delasign.com/blog/reactjs-3js-vitejs/utm=vitejs-threejs-reactjs-starter-project">How to create a React, Typescript & ThreeJS GLSL Vite Project 🔗</a>
+2. <a href="https://delasign.com/blog/react-threejs-glsl-resources/utm=vitejs-threejs-reactjs-starter-project">React, ThreeJS & GLSL Resources 🔗</a>
 
 # 📚 Tutorials
 
 ## ThreeJS
 
-### Setup
+### Setup & Basics
 
 1. <a href="https://delasign.com/blog/reactjs-3js-starter-project/?utm=vitejs-threejs-reactjs-starter-project">How to create a ThreeJS responsive 
 ReactJS project 🔗</a>
@@ -66,13 +67,19 @@ ReactJS project 🔗</a>
 4. <a href="https://delasign.com/blog/reactjs-3js-lights-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add lights to a material that uses a shader in ThreeJS 🔗</a>
 5. <a href="https://delasign.com/blog/reactjs-3js-cube-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add a shader to a box geometry in ThreeJS 🔗</a>
 6. <a href="https://delasign.com/blog/reactjs-3js-orbital-controls/?utm=vitejs-threejs-reactjs-starter-project">How to add Orbit Controls to a ThreeJS scene in ReactJS 🔗</a>
-7. <a href="https://delasign.com/blog/reactjs-3js-box-geometry-colored-faces-shader/?utm=vitejs-threejs-reactjs-starter-project">How to color the faces of a box geometry using a shader in ThreeJS 🔗</a>
 
 ### Uniforms, Varying & Attributes
 1. <a href="https://delasign.com/blog/reactjs-3js-data-vertex-to-fragment/?utm=vitejs-threejs-reactjs-starter-project">How to pass data from a vertex shader to a fragment shader in ThreeJS 🔗</a>
 2. <a href="https://delasign.com/blog/reactjs-3js-data-to-vertex-and-fragment/?utm=vitejs-threejs-reactjs-starter-project">How to create and use uniform data in shaders in ThreeJS 🔗</a>
 3. <a href="https://delasign.com/blog/reactjs-3js-attributes/?utm=vitejs-threejs-reactjs-starter-project">How to create and use attributes in shaders in ThreeJS 🔗</a>
 
+### GLSL
+1. <a href="https://delasign.com/blog/reactjs-3js-box-geometry-colored-faces-shader/?utm=vitejs-threejs-reactjs-starter-project">How to color the faces of a box geometry using a shader in ThreeJS 🔗</a>
+2. <a href="https://delasign.com/blog/react-3js-glsl-shader/?utm=vitejs-threejs-reactjs-starter-project">How to use GLSL shaders in ReactJS & ThreeJS 🔗</a>
+3. <a href="https://delasign.com/blog/react-3js-glsl-include/?utm=vitejs-threejs-reactjs-starter-project">How to import a GLSL file into a GLSL file in ReactJS & ThreeJS 🔗</a>
+
+
 ### Errors
 
 1. <a href="https://delasign.com/blog/reactjs-renders-multiple-threejs-canvases-on-save-error/?utm=vitejs-threejs-reactjs-starter-project">ReactJS renders multiple ThreeJS canvases on save 🔗</a>
+2. <a href="https://delasign.com/blog/react-3js-glsl-invalid-directive-name-error/?utm=vitejs-threejs-reactjs-starter-project">How to fix the include invalid directive name error in React & ThreeJS 🔗</a>
