@@ -2,13 +2,15 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import * as THREE from "three";
+import { GUI } from 'dat.gui'
+
 
 // MARK: Redux
 // MARK: Types
 // MARK: Components
 // MARK: Shaders
-import vertexShader from "../../shaders/sample/vertex.glsl";
-import fragmentShader from "../../shaders/sample/fragment.glsl";
+import vertexShader from "shaders/sample/vertex.glsl";
+import fragmentShader from "shaders/sample/fragment.glsl";
 // MARK: Functionality
 // MARK: Utils
 
@@ -39,6 +41,7 @@ const Scene = ({}: Props) => {
     // componentDidMount events
     // Render the scene
     renderScene();
+    setupGUI();
     // Add the resize listener
     window.addEventListener("resize", onWindowResize, false);
 
@@ -46,6 +49,7 @@ const Scene = ({}: Props) => {
       // componentWillUnmount events
       // Make sure to remove the renderer from the container, to avoid ThreeJS drawing an additional canvas everytime you make changes to the code.
       containerRef.current.removeChild(renderer.domElement);
+      gui.destroy()
       // Remove the event listener
       window.removeEventListener("resize", onWindowResize, false);
     };
@@ -55,6 +59,17 @@ const Scene = ({}: Props) => {
   const scene = new THREE.Scene();
   const renderer = new THREE.WebGLRenderer();
   const camera = new THREE.PerspectiveCamera();
+
+  // Shader Material
+  const shaderMaterial = new THREE.ShaderMaterial({
+    vertexShader: vertexShader,
+    fragmentShader: fragmentShader,
+    uniforms: { 
+      color: { value: new THREE.Color(1,1,0) }
+    }
+  });
+
+  const gui = new GUI();
 
   // MARK: Functionality
   const renderScene = () => {
@@ -71,11 +86,6 @@ const Scene = ({}: Props) => {
 
     // Create a plane that matches the camera view
     const planeGeometry = new THREE.PlaneGeometry(2, 2);
-    // Shader Material
-    const shaderMaterial = new THREE.ShaderMaterial({
-    vertexShader: vertexShader,
-    fragmentShader: fragmentShader,
-    });
     const plane = new THREE.Mesh(planeGeometry, shaderMaterial);
 
     // Add the Plane
@@ -84,6 +94,9 @@ const Scene = ({}: Props) => {
     // Position the camera
     camera.position.z = 5;
     renderer.render(scene, camera);
+
+    // Animate
+    animate()
   };
   // When the window resizes adapt the scene
   const onWindowResize = () => {
@@ -98,6 +111,14 @@ const Scene = ({}: Props) => {
     renderer.clear();
     renderer.render(scene, camera);
   };
+
+  // GUI
+  const setupGUI = () => {
+    const colorFolder = gui.addFolder("Color")
+    colorFolder.add(shaderMaterial.uniforms.color.value, "r", 0, 1, 0.1);
+    colorFolder.add(shaderMaterial.uniforms.color.value, "b", 0, 1, 0.1); 
+    colorFolder.add(shaderMaterial.uniforms.color.value, "g", 0, 1, 0.1);
+  }
 
   // MARK: Render
   return <Container ref={containerRef}></Container>;

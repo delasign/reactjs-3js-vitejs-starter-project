@@ -13,12 +13,17 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "shaders/*": ["./src/shaders/*"],
+      "assets/*": ["./src/assets/*"],
+    }
   },
   "include": ["src", "index.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
