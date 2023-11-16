@@ -60,13 +60,16 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Setup & Basics
 
-1. <a href="https://delasign.com/blog/reactjs-3js-starter-project/?utm=vitejs-threejs-reactjs-starter-project">How to create a ThreeJS responsive 
-ReactJS project 🔗</a>
-2. <a href="https://delasign.com/blog/reactjs-3js-setup-shader/?utm=vitejs-threejs-reactjs-starter-project">How to add a shader to a ThreeJS geometry in ReactJS 🔗</a>
-3. <a href="https://delasign.com/blog/reactjs-3js-lights-standard-material/?utm=vitejs-threejs-reactjs-starter-project">How to add lights to a standard material in ThreeJS 🔗</a>
-4. <a href="https://delasign.com/blog/reactjs-3js-lights-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add lights to a material that uses a shader in ThreeJS 🔗</a>
-5. <a href="https://delasign.com/blog/reactjs-3js-cube-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add a shader to a box geometry in ThreeJS 🔗</a>
-6. <a href="https://delasign.com/blog/reactjs-3js-orbital-controls/?utm=vitejs-threejs-reactjs-starter-project">How to add Orbit Controls to a ThreeJS scene in ReactJS 🔗</a>
+1. <a href="https://delasign.com/blog/reactjs-3js-starter-project/?utm=vitejs-threejs-reactjs-starter-project">How to create a ThreeJS responsive ReactJS project 🔗</a>
+2. <a href="https://delasign.com/blog/react-vitejs-typescript-path-alias/?utm=vitejs-threejs-reactjs-starter-project">How to use alias paths in Typescript & ViteJS 🔗</a>
+3. <a href="https://delasign.com/blog/reactjs-3js-setup-shader/?utm=vitejs-threejs-reactjs-starter-project">How to add a shader to a ThreeJS geometry in ReactJS 🔗</a>
+4. <a href="https://delasign.com/blog/reactjs-3js-lights-standard-material/?utm=vitejs-threejs-reactjs-starter-project">How to add lights to a standard material in ThreeJS 🔗</a>
+5. <a href="https://delasign.com/blog/reactjs-3js-lights-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add lights to a material that uses a shader in ThreeJS 🔗</a>
+6. <a href="https://delasign.com/blog/reactjs-3js-cube-shader-material/?utm=vitejs-threejs-reactjs-starter-project">How to add a shader to a box geometry in ThreeJS 🔗</a>
+7. <a href="https://delasign.com/blog/reactjs-3js-orbital-controls/?utm=vitejs-threejs-reactjs-starter-project">How to add Orbit Controls to a ThreeJS scene in ReactJS 🔗</a>
+
+### DAT.GUI
+1. <a href="https://delasign.com/blog/react-3js-gui/?utm=vitejs-threejs-reactjs-starter-project">How to use dat.gui with ReactJS and ThreeJS 🔗</a>
 
 ### Uniforms, Varying & Attributes
 1. <a href="https://delasign.com/blog/reactjs-3js-data-vertex-to-fragment/?utm=vitejs-threejs-reactjs-starter-project">How to pass data from a vertex shader to a fragment shader in ThreeJS 🔗</a>
@@ -83,3 +86,4 @@ ReactJS project 🔗</a>
 
 1. <a href="https://delasign.com/blog/reactjs-renders-multiple-threejs-canvases-on-save-error/?utm=vitejs-threejs-reactjs-starter-project">ReactJS renders multiple ThreeJS canvases on save 🔗</a>
 2. <a href="https://delasign.com/blog/react-3js-glsl-invalid-directive-name-error/?utm=vitejs-threejs-reactjs-starter-project">How to fix the include invalid directive name error in React & ThreeJS 🔗</a>
+3. <a href="https://delasign.com/blog/reactjs-3js-gui-multiple-guis-error/?utm=vitejs-threejs-reactjs-starter-project">Dat.Gui produces multiple GUI's on hot reload in ReactJS	 🔗</a>
