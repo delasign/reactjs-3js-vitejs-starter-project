@@ -7,6 +7,7 @@ import { GUI } from 'dat.gui'
 
 // MARK: Redux
 // MARK: Types
+import GUIThreeHexColor from "types/GUI/GUIThreeHexColor";
 // MARK: Components
 // MARK: Shaders
 import vertexShader from "shaders/sample/vertex.glsl";
@@ -60,12 +61,17 @@ const Scene = ({}: Props) => {
   const renderer = new THREE.WebGLRenderer();
   const camera = new THREE.PerspectiveCamera();
 
+  // Color
+  const geometryBaseColor: GUIThreeHexColor = {
+    hex: "#F2BA59"
+  }
+
   // Shader Material
   const shaderMaterial = new THREE.ShaderMaterial({
     vertexShader: vertexShader,
     fragmentShader: fragmentShader,
     uniforms: { 
-      color: { value: new THREE.Color(1,1,0) }
+      color: { value: new THREE.Color(geometryBaseColor.hex) }
     }
   });
 
@@ -115,9 +121,15 @@ const Scene = ({}: Props) => {
   // GUI
   const setupGUI = () => {
     const colorFolder = gui.addFolder("Color")
-    colorFolder.add(shaderMaterial.uniforms.color.value, "r", 0, 1, 0.1);
-    colorFolder.add(shaderMaterial.uniforms.color.value, "b", 0, 1, 0.1); 
-    colorFolder.add(shaderMaterial.uniforms.color.value, "g", 0, 1, 0.1);
+    // Hex Color Selector
+    const color = colorFolder.addColor(geometryBaseColor, "hex")
+    color.onChange((value) => {
+      shaderMaterial.uniforms.color.value = new THREE.Color(value)
+    })
+    // R, G, B Slides
+    // colorFolder.add(shaderMaterial.uniforms.color.value, "r", 0, 1, 0.1);
+    // colorFolder.add(shaderMaterial.uniforms.color.value, "b", 0, 1, 0.1); 
+    // colorFolder.add(shaderMaterial.uniforms.color.value, "g", 0, 1, 0.1);
   }
 
   // MARK: Render

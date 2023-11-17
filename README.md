@@ -70,6 +70,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### DAT.GUI
 1. <a href="https://delasign.com/blog/react-3js-gui/?utm=vitejs-threejs-reactjs-starter-project">How to use dat.gui with ReactJS and ThreeJS 🔗</a>
+2. <a href="https://delasign.com/blog/reactjs-3js-dat-gui-color/?utm=vitejs-threejs-reactjs-starter-project">How to alter a ThreeJS Color using dat.gui 🔗</a>
 
 ### Uniforms, Varying & Attributes
 1. <a href="https://delasign.com/blog/reactjs-3js-data-vertex-to-fragment/?utm=vitejs-threejs-reactjs-starter-project">How to pass data from a vertex shader to a fragment shader in ThreeJS 🔗</a>

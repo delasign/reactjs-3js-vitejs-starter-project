@@ -23,6 +23,7 @@
       "components/*": ["./src/components/*"],
       "shaders/*": ["./src/shaders/*"],
       "assets/*": ["./src/assets/*"],
+      "types/*": ["./src/types/*"],
     }
   },
   "include": ["src", "index.d.ts"],

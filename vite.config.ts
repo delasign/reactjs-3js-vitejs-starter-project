@@ -15,7 +15,7 @@ export default defineConfig({
       "components": resolve(root, "components"),
       "types": resolve(root, "types"),
       "shaders": resolve(root, "shaders"),
-      "utils": resolve(root, "utils")
+      "utils": resolve(root, "utils"),
     }
   }
 })
