@@ -7,9 +7,14 @@ import glsl from "vite-plugin-glsl"
 
 //@ts-ignore
 const root = resolve(__dirname, "src");
+//@ts-ignore
+const outDir = resolve(__dirname, "public");
 
 export default defineConfig({
   plugins: [react(), glsl()],
+  build: {
+    outDir: outDir
+  },
   resolve: {
     alias: {
       "components": resolve(root, "components"),

@@ -1,4 +1,5 @@
 // MARK: NPM Modules
+// @ts-ignore
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import * as THREE from "three";
