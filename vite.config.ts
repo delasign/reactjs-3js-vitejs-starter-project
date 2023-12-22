@@ -5,15 +5,20 @@ import react from '@vitejs/plugin-react'
 import glsl from "vite-plugin-glsl"
 // https://vitejs.dev/config/
 
-//@ts-ignore
 const root = resolve(__dirname, "src");
-//@ts-ignore
 const outDir = resolve(__dirname, "public");
 
 export default defineConfig({
+  root,
   plugins: [react(), glsl()],
   build: {
-    outDir: outDir
+    outDir: outDir,
+    rollupOptions: {
+      input: {
+        main: resolve(root, "index.html"),
+        sample: resolve(root, "pages/sample/index.html")
+      }
+    }
   },
   resolve: {
     alias: {
