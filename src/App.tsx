@@ -1,4 +1,4 @@
-import Scene from "./components/3JS/light-scenes/ambient-light"
+import Scene from "./components/3JS/lightScenes/ambientLight"
 function App() {
 
   return (

@@ -12,8 +12,8 @@ import GUIThreeHexColor from "types/GUI/GUIThreeHexColor";
 import AmbientLight from "types/lights/ambientLight";
 // MARK: Components
 // MARK: Shaders
-import vertexShader from "shaders/ambient-light/vertex.glsl";
-import fragmentShader from "shaders/ambient-light/fragment.glsl";
+import vertexShader from "shaders/ambientLight/vertex.glsl";
+import fragmentShader from "shaders/ambientLight/fragment.glsl";
 // MARK: Functionality
 // MARK: Utils
 import createAmbientLightGUIFolder from "utils/GUI/ambientLight";
