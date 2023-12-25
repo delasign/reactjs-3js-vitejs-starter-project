@@ -9,13 +9,14 @@ import { GUI } from 'dat.gui'
 // MARK: Redux
 // MARK: Types
 import GUIThreeHexColor from "types/GUI/GUIThreeHexColor";
+import AmbientLight from "types/lights/ambientLight";
 // MARK: Components
 // MARK: Shaders
-import vertexShader from "shaders/sample/vertex.glsl";
-import fragmentShader from "shaders/sample/fragment.glsl";
+import vertexShader from "shaders/ambient-light/vertex.glsl";
+import fragmentShader from "shaders/ambient-light/fragment.glsl";
 // MARK: Functionality
 // MARK: Utils
-
+import createAmbientLightGUIFolder from "utils/GUI/ambientLight";
 // MARK: Styled Components
 
 const Container = styled.div`
@@ -62,17 +63,28 @@ const Scene = ({}: Props) => {
   const renderer = new THREE.WebGLRenderer();
   const camera = new THREE.PerspectiveCamera();
 
+
+  // Ambient Light
+  const ambientLight: AmbientLight = {
+    base: {
+      color: new THREE.Color("#9747FF"),
+      ambientIntensity: 1,
+      diffuseIntensity: 1
+    }
+  }
+
   // Color
   const geometryBaseColor: GUIThreeHexColor = {
-    hex: "#F2BA59"
+    hex: "#FFFFFF"
   }
 
   // Shader Material
   const shaderMaterial = new THREE.ShaderMaterial({
     vertexShader: vertexShader,
     fragmentShader: fragmentShader,
-    uniforms: { 
-      color: { value: new THREE.Color(geometryBaseColor.hex) }
+    uniforms: {
+      ambientLight: {value: ambientLight },
+      geometryBaseColor: { value: new THREE.Color(geometryBaseColor.hex) }
     }
   });
 
@@ -121,12 +133,14 @@ const Scene = ({}: Props) => {
 
   // GUI
   const setupGUI = () => {
-    const colorFolder = gui.addFolder("Color")
+    const colorFolder = gui.addFolder("Base Color")
     // Hex Color Selector
     const color = colorFolder.addColor(geometryBaseColor, "hex")
     color.onChange((value) => {
-      shaderMaterial.uniforms.color.value = new THREE.Color(value)
+      shaderMaterial.uniforms.geometryBaseColor.value = new THREE.Color(value)
     })
+
+    createAmbientLightGUIFolder(gui, "Ambient Light", ambientLight)
   }
 
   // MARK: Render

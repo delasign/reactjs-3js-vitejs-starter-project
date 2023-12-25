@@ -24,6 +24,7 @@
       "shaders/*": ["./src/shaders/*"],
       "assets/*": ["./src/assets/*"],
       "types/*": ["./src/types/*"],
+      "utils/*": ["./src/utils/*"],
     }
   },
   "include": ["src", "index.d.ts"],
