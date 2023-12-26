@@ -64,7 +64,7 @@ const Scene = ({}: Props) => {
   const camera = new THREE.PerspectiveCamera();
 
 
-  // Point Light
+  // Spot Light
   const spotLight: SpotLight = {
     pointLight: {
       base: {
