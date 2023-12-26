@@ -7,9 +7,4 @@ interface PointLight {
     attenuation: Attentuation,
 }
 
-// interface PointLight {
-//     color: THREE.Color,
-//     position: THREE.Vector3,
-//     intensity: number,
-// }
 export default PointLight
