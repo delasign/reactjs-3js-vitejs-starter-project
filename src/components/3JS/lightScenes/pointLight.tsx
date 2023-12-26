@@ -9,14 +9,14 @@ import { GUI } from 'dat.gui'
 // MARK: Redux
 // MARK: Types
 import GUIThreeHexColor from "types/GUI/GUIThreeHexColor";
-import DirectionalLight from "types/lights/directionalLight";
+import PointLight from "types/lights/pointLight";
 // MARK: Components
 // MARK: Shaders
-import vertexShader from "shaders/directionalLight/vertex.glsl";
-import fragmentShader from "shaders/directionalLight/fragment.glsl";
+import vertexShader from "shaders/pointLight/vertex.glsl";
+import fragmentShader from "shaders/pointLight/fragment.glsl";
 // MARK: Functionality
 // MARK: Utils
-import createDirectionalLightGUIFolder from "utils/GUI/directionalLight";
+import createPointLightGUIFolder from "utils/GUI/pointLight";
 // MARK: Styled Components
 
 const Container = styled.div`
@@ -64,14 +64,19 @@ const Scene = ({}: Props) => {
   const camera = new THREE.PerspectiveCamera();
 
 
-  // Directional Light
-  const directionalLight: DirectionalLight = {
+  // Point Light
+  const pointLight: PointLight = {
     base: {
       color: new THREE.Color("#9747FF"),
       ambientIntensity: 1,
       diffuseIntensity: 1
     },
-    direction: new THREE.Vector3(5,1,1)
+    position: new THREE.Vector3(0, 1.0, 0.5),
+        attenuation: {
+          constant: 1,
+          linear: 1,
+          exponential: 1
+        }
   }
 
   // Color
@@ -84,7 +89,7 @@ const Scene = ({}: Props) => {
     vertexShader: vertexShader,
     fragmentShader: fragmentShader,
     uniforms: {
-      directionalLight: {value: directionalLight },
+      pointLight: {value: pointLight },
       geometryBaseColor: { value: new THREE.Color(geometryBaseColor.hex) }
     }
   });
@@ -141,7 +146,7 @@ const Scene = ({}: Props) => {
       shaderMaterial.uniforms.geometryBaseColor.value = new THREE.Color(value)
     })
 
-    createDirectionalLightGUIFolder(gui, "Directional Light", directionalLight)
+    createPointLightGUIFolder(gui, "Point Light", pointLight)
   }
 
   // MARK: Render

@@ -1,4 +1,4 @@
-import Scene from "./components/3JS/lightScenes/directionalLight"
+import Scene from "./components/3JS/lightScenes/pointLight"
 function App() {
 
   return (
